@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: "Outfit", sans-serif;
+
+}
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px; /* Set the height for better alignment */
+    background: url('src/assets/slide_icon.svg') no-repeat center center;
+    background-size: cover;
+    cursor: pointer; /* Pointer on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    background: url('src/assets/slide_icon.svg') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.slider::-ms-thumb {
+    width: 30px;
+    height: 30px;
+    background: url('src/assets/slide_icon.svg') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+/* For Firefox */
+.slider::-moz-range-track {
+    background: transparent; /* Set track background as needed */
+}
+
+/* For WebKit */
+.slider::-webkit-slider-runnable-track {
+    background: transparent; /* Set track background as needed */
+}
+
+/* For Internet Explorer */
+.slider::-ms-track {
+    background: transparent; /* Set track background as needed */
+    height: 8px; /* Adjust height if needed */
+}
+
+.bg-layer{
+    background-image: url(/src/assets/bg_layer.png);
+}

@@ -33,6 +33,7 @@ import "dotenv/config";
 import cors from "cors";
 import dotenv from "dotenv";
 import connectMongoDb from "./configs/mongodb.js";
+import userRouter from "./routes/user.routes.js";
 
 dotenv.config({ path: "./.env" });
 // app config
@@ -58,5 +59,7 @@ connectMongoDb()
 app.get("/", (req, res) => {
   return res.send("Api working");
 });
+
+app.use("/api/user", userRouter );
 
 export default app; // Export the 'app' instance

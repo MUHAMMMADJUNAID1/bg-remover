@@ -60,6 +60,6 @@ app.get("/", (req, res) => {
   return res.send("Api working");
 });
 
-app.use("/api/user", userRouter );
+app.use("/api/user", userRouter);
 
 export default app; // Export the 'app' instance

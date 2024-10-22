@@ -9,12 +9,11 @@ dotenv.config({ path: "./.env" });
 const PORT = process.env.PORT || 4000;
 // initalize instatnce of express
 const app = express();
-// connecting mongodb
-await connectMongoDb();
 
 // initalize middleware
 app.use(express.json());
 app.use(cors());
+console.log(process.env.MONGO_DB_URI);
 
 connectMongoDb()
   .then(() => {
